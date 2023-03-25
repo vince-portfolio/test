@@ -20,11 +20,11 @@ for(let l=0;l<at.length;l++){
 }}
 const g=(c)=>document.getElementsByClassName(c)
 for(let l=1;l<ad.length;l++){
-  let i = document.createElement("link");
-  i.rel="preload"
-  i.href=ad[l][2]
-  i.as="image"
+  let i = document.createElement("img");
+  i.src=ad[l][2]
+  i.style.display="none"
   g('l')[0].append(i);
+  //<img src=ad[a][2]>
   //<link rel="preload" href="image-1.jpg?p=1" as="image" fetchpriority="high">
 }
 const i=(s,a)=>{
