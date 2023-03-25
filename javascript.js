@@ -19,6 +19,14 @@ for(let l=0;l<at.length;l++){
   }
 }}
 const g=(c)=>document.getElementsByClassName(c)
+for(let l=1;l<ad.length;l++){
+  let i = document.createElement("link");
+  i.rel="preload"
+  i.href=ad[l][2]
+  i.as="image"
+  g('l')[0].append(i);
+  //<link rel="preload" href="image-1.jpg?p=1" as="image" fetchpriority="high">
+}
 const i=(s,a)=>{
   const gt=(c,n,n1,n2)=>g(c)[n].innerText=ad[n1][n2]
   gt('athlete-name',s-1,a,0)
