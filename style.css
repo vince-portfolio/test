@@ -1,0 +1,206 @@
+body {
+  background-color: #373F51;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.athlete-name {
+  text-align: center;
+  font-size: 4rem;
+  color: orange;
+}
+
+.athlete-image {
+  height: 91%;
+}
+
+.vs-column .athlete-image img {
+  height: 100%;
+  width: auto;
+}
+
+.vs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffc107;
+}
+
+.table-1, .table-2 {
+  position: absolute;
+  margin: auto;
+  text-align: center;
+}
+
+.table-1 {
+  top:0; left:0; right:0; bottom: 50%;
+}
+
+.table-2 {
+  top:50%; left:0; right:0; bottom:0;
+}
+
+.table-3, .table-4 {
+  display: none;
+}
+
+td, th{
+  padding-right: 1vw;
+  padding-left: 1vw;
+  color: yellow;
+}
+
+th {
+  font-size: 2rem;
+  -webkit-text-stroke: 1px deepskyblue;
+}
+
+td {
+  font-size: 1.5rem;
+}
+
+.left-1, .right-1, .left-2, .right-2 {
+  position: absolute;
+  top: 50%;
+  margin: auto;
+}
+
+.left-1 {
+  left: -20;
+}
+
+.right-1 {
+  left: 25%;
+}
+
+.left-2 {
+  right: 25%;
+}
+
+.right-2 {
+  right: 0;
+}
+
+.left-1:hover, .right-1:hover, .left-2:hover, .right-2:hover {
+  height: 13%;
+  cursor: pointer;
+}
+
+.left-1:active, .right-1:active, .left-2:active, .right-2:active {
+  height: 12%;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .athlete-name {
+    color: orange;
+    font-size: 2rem;
+  }
+
+  .athlete-image {
+    height: 85%;
+  }
+
+  .vs-column {
+    max-height: 50%;
+  }
+
+  .vs-column:first-child {
+    margin-right: 4px !important;
+  }
+
+  .vs-column .athlete-image img {
+    max-height: 100%;
+  }
+
+  .vs {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-49%, -100%);
+  
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffc107;
+  }
+
+  .table-1, .table-2 {
+    display: none;
+  }
+
+  .table-3, .table-4 {
+    display: inline-table;
+    position: absolute;
+    margin: auto;
+  }
+
+  .table-3 {
+    right: 2%; top: 0; bottom: 50%;
+    text-align: left;
+  }
+
+  .table-4 {
+    left: 2%; top: 50%; bottom: 0;
+    text-align: right;
+  }
+
+  td, th{
+    padding-right: 3vw;
+    padding-left: 3vw;
+    font-size: 1rem;
+    color: black;
+    -webkit-text-stroke: 0;
+  }
+
+  .left-1, .right-1, .left-2, .right-2 {
+    height: 7%;
+  }
+
+  .left-1, .right-1 {
+    top: 25%;
+  }
+
+  .left-1 {
+    left: -12;
+  }
+  
+  .right-1 {
+    left: 25%;
+  }
+  
+  .left-2, .right-2 {
+    top: 75%;
+  }
+
+  .left-2 {
+    right: 25%;
+  }
+  
+  .left-1:hover, .right-1:hover, .left-2:hover, .right-2:hover {
+    height: 9vw;
+  }
+  
+  .left-1:active, .right-1:active, .left-2:active, .right-2:active {
+    height: 8vw;
+  }
+}
+
+.vs-column {
+  flex: 1;
+  text-align: left;
+}
+
+.vs-column:first-child {
+  margin-right: 20px;
+}
