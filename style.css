@@ -1,6 +1,23 @@
+:root {
+  --competitors-looping-interval: 0;
+  /*  - The above "--competitors-looping-interval"
+        is using to set the "Competitors Looping Interval".
+      - The interval unit is in "Second".
+      - Set it to "0" to "Disabled" the "Competitors Looping".
+  */
+
+  --idle-time-to-restart-competitors-looping: 5;
+  /*  - The above "--idle-time-to-restart-competitors-looping"
+        is using to set the "Idle Time To Restart Competitors Looping".
+      - The interval unit is in "Second".
+      - Set it to "0" to "Disabled" the "Restart of the Competitors Looping".
+  */
+}
+
 body {
   background-color: #373F51;
   font-family: Helvetica, Arial, sans-serif;
+  opacity: 0.2;
 }
 
 .container {
