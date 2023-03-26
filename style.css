@@ -17,7 +17,6 @@
 body {
   background-color: #373F51;
   font-family: Helvetica, Arial, sans-serif;
-  opacity: 0.2;
 }
 
 .container {
@@ -220,4 +219,8 @@ td {
 
 .vs-column:first-child {
   margin-right: 20px;
+}
+
+.dim {
+  opacity: 0.2;
 }

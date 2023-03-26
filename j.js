@@ -45,8 +45,8 @@ for(let l=1;l<ad.length;l++){
   g('l')[0].append(i);
 }
 window.onload = () => {
-  console.log("page is fully loaded");
 
+g('dim')[0].classList.remove('dim')
 
 
 const e=(ev,s,is)=>{
