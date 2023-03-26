@@ -1,5 +1,5 @@
 :root {
-  --competitors-looping-interval: 0;
+  --competitors-looping-interval: 1;
   /*  - The above "--competitors-looping-interval"
         is using to set the "Competitors Looping Interval".
       - The interval unit is in "Second".
