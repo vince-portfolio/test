@@ -19,14 +19,6 @@ for(let l=0;l<at.length;l++){
   }
 }}
 const g=(c)=>document.getElementsByClassName(c)
-for(let l=1;l<ad.length;l++){
-  let i = document.createElement("img");
-  i.src=ad[l][2]
-  i.style.display="none"
-  g('l')[0].append(i);
-  //<img src=ad[a][2]>
-  //<link rel="preload" href="image-1.jpg?p=1" as="image" fetchpriority="high">
-}
 const i=(s,a)=>{
   const gt=(c,n,n1,n2)=>g(c)[n].innerText=ad[n1][n2]
   gt('athlete-name',s-1,a,0)
@@ -40,9 +32,6 @@ const i=(s,a)=>{
 }
 let s1=1,s2=Math.round(ad.length/2)
 i(1,s1);i(2,s2)
-/*for(null;null;s1++,s2++){
-  i(1,s1);i(2,s2)
-}*/
 const e=(ev,s,is)=>{
   ev=='a'?s+=1:s-=1
   s=s>=ad.length?1:s
@@ -53,7 +42,22 @@ const e=(ev,s,is)=>{
   i(is,s)
   return s
 }
+let s=true
+const ii=()=>{
+  clearTimeout(st)
+  s?s1=e('a',s1,1):s2=e('a',s2,2)
+  s=!s
+}
+let si=setInterval(ii, 3000)
+let st
+const ci=()=>{
+  clearInterval(si)
+  clearTimeout(st)
+  st=setTimeout(()=>si=setInterval(ii, 3000),5000)
+}
 const el=(c,cn,e,f)=>g(c)[cn].addEventListener(e,f)
+el('body',0,'click',ci)
+el('body',0,'touchstart',ci)
 el('left-1',0,'click',()=>s1=e('s',s1,1))
 el('right-1',0,'click',()=>s1=e('a',s1,1))
 el('left-2',0,'click',()=>s2=e('s',s2,2))
@@ -73,4 +77,14 @@ el('vs-column',1,'touchstart',(e)=>tS(e))}
 }
 el('vs-column',0,'touchend',(e)=>tE(e,1))
 el('vs-column',1,'touchend',(e)=>tE(e,2))}}}
+
+/* for(let l=1;l<ad.length;l++){
+  let i = document.createElement("img");
+  i.src=ad[l][2]
+  i.style.display="none"
+  g('l')[0].append(i);
+  //<img src=ad[a][2]>
+  //<link rel="preload" href="image-1.jpg?p=1" as="image" fetchpriority="high">
+} */
+
 console.clear()
