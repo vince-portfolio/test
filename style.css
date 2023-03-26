@@ -1,12 +1,12 @@
 :root {
-  --competitors-looping-interval: 1;
+  --competitors-looping-interval: 0;
   /*  - The above "--competitors-looping-interval"
         is using to set the "Competitors Looping Interval".
       - The interval unit is in "Second".
       - Set it to "0" to "Disabled" the "Competitors Looping".
   */
 
-  --idle-time-to-restart-competitors-looping: 2;
+  --idle-time-to-restart-competitors-looping: 5;
   /*  - The above "--idle-time-to-restart-competitors-looping"
         is using to set the "Idle Time To Restart Competitors Looping".
       - The interval unit is in "Second".
@@ -222,5 +222,29 @@ td {
 }
 
 .dim {
-  opacity: 0.2;
+  opacity: 0.12;
+}
+
+.dim-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: condemned_blink_effect 2s linear infinite;
+  font-size: 4rem;
+  font-weight: 700;
+  color: darkgrey;
+}
+
+@keyframes condemned_blink_effect {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
 }

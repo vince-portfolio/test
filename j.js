@@ -47,6 +47,7 @@ for(let l=1;l<ad.length;l++){
 window.onload = () => {
 
 g('dim')[0].classList.remove('dim')
+g('dim-text')[0].remove()
 
 
 const e=(ev,s,is)=>{
