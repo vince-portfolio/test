@@ -42,7 +42,7 @@ for(let l=1;l<ad.length;l++){
   g('l')[0].append(i);
 }
 const el=(c,cn,e,f)=>g(c)[cn].addEventListener(e,f)
-el('body',0,'touchstart',(e)=>e.preventDefault())
+el('body',0,'touchstart',(e)=>{console.log(e);e.preventDefault()})
 window.onload = () => {
   g('dim')[0].classList.remove('dim')
   g('dim-text')[0].remove()
@@ -70,7 +70,6 @@ window.onload = () => {
   const ci=()=>{
     clearInterval(si)
     clearTimeout(st)
-  console.log(rlit)
     rlit!=0?st=setTimeout(()=>liv!=0?si=setInterval(ii,liv):null,rlit):null
   }
   el('body',0,'click',ci)
