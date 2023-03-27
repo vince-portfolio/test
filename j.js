@@ -41,6 +41,7 @@ for(let l=1;l<ad.length;l++){
   i.style.display="none"
   g('l')[0].append(i);
 }
+const el=(c,cn,e,f)=>g(c)[cn].addEventListener(e,f)
 el('body',0,'touchstart',(e)=>e.preventDefault())
 window.onload = () => {
   g('dim')[0].classList.remove('dim')
@@ -72,7 +73,6 @@ window.onload = () => {
   console.log(rlit)
     rlit!=0?st=setTimeout(()=>liv!=0?si=setInterval(ii,liv):null,rlit):null
   }
-  const el=(c,cn,e,f)=>g(c)[cn].addEventListener(e,f)
   el('body',0,'click',ci)
   el('body',0,'touchstart',ci)
   el('left-1',0,'click',()=>s1=e('s',s1,1))
