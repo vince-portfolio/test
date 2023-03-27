@@ -41,8 +41,8 @@ for(let l=1;l<ad.length;l++){
   i.style.display="none"
   g('l')[0].append(i);
 }
-const el=(c,cn,e,f)=>g(c)[cn].addEventListener(e,f)
-el('body',0,'touchstart',(e)=>{console.log(e);e.preventDefault()})
+const el=(c,cn,e,f)=>g(c)[cn].addEventListener(e,f,{passive: false})
+el('body',0,'touchstart',(e)=>e.preventDefault())
 window.onload = () => {
   g('dim')[0].classList.remove('dim')
   g('dim-text')[0].remove()
