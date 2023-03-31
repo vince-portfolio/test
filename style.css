@@ -112,7 +112,8 @@ body {
 }
 
 
-@media (max-width: 800px) {
+/*@media (max-width: 800px) {*/
+@media (orientation: portrait) {
   .container {
     flex-direction: column;
   }
