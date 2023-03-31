@@ -1,21 +1,6 @@
-:root {
-  --competitors-looping-interval: 1;
-  /*  - The above "--competitors-looping-interval"
-        is using to set the "Competitors Looping Interval".
-      - The interval unit is in "Second".
-      - Set it to "0" to "Disabled" the "Competitors Looping".
-  */
-
-  --idle-time-to-restart-competitors-looping: 5;
-  /*  - The above "--idle-time-to-restart-competitors-looping"
-        is using to set the "Idle Time To Restart Competitors Looping".
-      - The interval unit is in "Second".
-      - Set it to "0" to "Disabled" the "Restart of the Competitors Looping".
-  */
-}
-
 body {
-  background-color: #373F51;
+  background-color: black;
+  margin: 0;
   font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -24,227 +9,197 @@ body {
   height: 100%;
 }
 
-.athlete-name {
-  text-align: center;
-  font-size: 4rem;
-  color: orange;
+.vs-column {
+  width: 100%;
+  display: flex;
 }
 
 .athlete-image {
-  height: 91%;
+  width: 100%;
+  align-self: flex-end;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .vs-column .athlete-image img {
-  height: 100%;
-  width: auto;
+  width: 100%;
 }
 
-.vs {
+.athlete-name {
+  color: white;
+  font-size: 3rem;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  font-size: 4rem;
-  font-weight: 700;
-  color: #ffc107;
+  bottom: 10%;
 }
 
-.table-1, .table-2 {
+.left-1 {
+  width: 0;
+  height: 0;
+  border-top: 2rem solid transparent;
+  border-bottom: 2rem solid transparent;
+  border-right: 3rem solid white;
   position: absolute;
+  left: 0; top: 50%; bottom: 50%;
   margin: auto;
+}
+
+.right-1 {
+  width: 0;
+  height: 0;
+  border-top: 2rem solid transparent;
+  border-bottom: 2rem solid transparent;
+  border-left: 3rem solid white;
+  position: absolute;
+  right: 0; top: 50%; bottom: 50%;
+  margin: auto;
+}
+
+.left-2 {
+  width: 0;
+  height: 0;
+  border-top: 2rem solid transparent;
+  border-bottom: 2rem solid transparent;
+  border-right: 3rem solid white;
+  position: absolute;
+  left: 0; top: 50%; bottom: 50%;
+  margin: auto;
+}
+
+.right-2 {
+  width: 0;
+  height: 0;
+  border-top: 2rem solid transparent;
+  border-bottom: 2rem solid transparent;
+  border-left: 3rem solid white;
+  position: absolute;
+  right: 0; top: 50%; bottom: 50%;
+  margin: auto;
+}
+
+.middle {
+  background-color: white;
+  flex-direction: column;
+
+  min-width: 33.34%;
+}
+
+.FPG {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.WHO-EARNS-MORE {
+  font-size: 2rem;
   text-align: center;
 }
 
 .table-1 {
-  top:0; left:0; right:0; bottom: 50%;
+  background-color: grey;
+  color: white;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: auto;
+  width: 95%;
 }
 
-.table-2 {
-  top:50%; left:0; right:0; bottom:0;
-}
-
-.table-3, .table-4 {
+.table-2, .table-3 {
   display: none;
 }
 
-td, th{
-  padding-right: 1vw;
-  padding-left: 1vw;
-  color: yellow;
+.row {
+  border: 0.5rem solid white;
+  padding: 1%;
 }
 
-th {
-  font-size: 2rem;
-  -webkit-text-stroke: 1px deepskyblue;
-}
-
-td {
-  font-size: 1.5rem;
-}
-
-.left-1, .right-1, .left-2, .right-2 {
-  position: absolute;
-  top: 50%;
-  margin: auto;
-}
-
-.left-1 {
-  left: -20;
-}
-
-.right-1 {
-  left: 25%;
-}
-
-.left-2 {
-  right: 25%;
-}
-
-.right-2 {
-  right: 0;
-}
-
-.left-1:hover, .right-1:hover, .left-2:hover, .right-2:hover {
-  height: 13%;
-  cursor: pointer;
-}
-
-.left-1:active, .right-1:active, .left-2:active, .right-2:active {
-  height: 12%;
-}
 
 @media (max-width: 800px) {
   .container {
     flex-direction: column;
   }
 
-  .athlete-name {
-    color: orange;
-    font-size: 2rem;
+  .vs-column {
+    max-height: 45%;
   }
 
   .athlete-image {
-    height: 85%;
+    height: 100%;
+    width: 50%;
   }
-
-  .vs-column {
-    max-height: 50%;
-  }
-
-  .vs-column:first-child {
-    margin-right: 4px !important;
-  }
-
-  .vs-column .athlete-image img {
-    max-height: 100%;
-  }
-
-  .vs {
-    position: absolute;
-    top: 49%;
-    left: 50%;
-    transform: translate(-49%, -100%);
   
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ffc107;
+  .vs-column .athlete-image img {
+    height: 100%;
+    width: auto;
   }
 
-  .table-1, .table-2 {
-    display: none;
+  .athlete-image-2 {
+    margin-right: 0;
   }
 
-  .table-3, .table-4 {
-    display: inline-table;
+  .athlete-name {
+    color: white;
+    font-size: 1.5rem;
     position: absolute;
-    margin: auto;
-  }
-
-  .table-3 {
-    right: 2%; top: 0; bottom: 50%;
-    text-align: left;
-  }
-
-  .table-4 {
-    left: 2%; top: 50%; bottom: 0;
-    text-align: right;
-  }
-
-  td, th{
-    padding-right: 3vw;
-    padding-left: 3vw;
-    font-size: 1rem;
-    color: black;
-    -webkit-text-stroke: 0;
-  }
-
-  .left-1, .right-1, .left-2, .right-2 {
-    height: 7%;
-  }
-
-  .left-1, .right-1 {
-    top: 25%;
+    bottom: 10%;
   }
 
   .left-1 {
-    left: -12;
+    border-top: 1.5rem solid transparent;
+    border-bottom: 1.5rem solid transparent;
+    border-right: 2rem solid white;
   }
   
   .right-1 {
-    left: 25%;
+    border-top: 1.5rem solid transparent;
+    border-bottom: 1.5rem solid transparent;
+    border-left: 2rem solid white;
   }
   
-  .left-2, .right-2 {
-    top: 75%;
-  }
-
   .left-2 {
-    right: 25%;
+    border-top: 1.5rem solid transparent;
+    border-bottom: 1.5rem solid transparent;
+    border-right: 2rem solid white;
   }
   
-  .left-1:hover, .right-1:hover, .left-2:hover, .right-2:hover {
-    height: 9vw;
+  .right-2 {
+    border-top: 1.5rem solid transparent;
+    border-bottom: 1.5rem solid transparent;
+    border-left: 2rem solid white;
+  }
+
+  .table-1 {
+    display: none;
+  }
+
+  .table {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  .right {
+    justify-content: flex-end;
+  }
+
+  .table-2, .table-3 {
+    display: block;
+    width: 75%;
+    background-color: gray;
+    text-align: center;
+    border: 0.1rem solid white;
+  }
+
+  .middle {
+    height: 10%;
+  }
+
+  .FPG {
+    font-size: 3rem;
+    text-align: center;
   }
   
-  .left-1:active, .right-1:active, .left-2:active, .right-2:active {
-    height: 8vw;
-  }
-}
-
-.vs-column {
-  flex: 1;
-  text-align: left;
-}
-
-.vs-column:first-child {
-  margin-right: 20px;
-}
-
-.dim {
-  opacity: 0.12;
-}
-
-.dim-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  animation: condemned_blink_effect 2s linear infinite;
-  font-size: 4rem;
-  font-weight: 700;
-  color: darkgrey;
-}
-
-@keyframes condemned_blink_effect {
-  0% {
-    visibility: hidden;
-  }
-  50% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
+  .WHO-EARNS-MORE {
+    font-size: 1rem;
+    text-align: center;
   }
 }
