@@ -12,6 +12,8 @@ body {
 .vs-column {
   width: 100%;
   display: flex;
+  min-width: 33.33%;
+  max-width: 33.33%;
 }
 
 .athlete-image {
@@ -80,6 +82,8 @@ body {
 .middle {
   background-color: white;
   flex-direction: column;
+  min-width: 33.33%;
+  max-width: 33.33%;
 }
 
 .FPG {
@@ -95,7 +99,7 @@ body {
 .table-1 {
   background-color: grey;
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   text-align: center;
   margin: auto;
   width: 95%;
@@ -118,6 +122,8 @@ body {
 
   .vs-column {
     max-height: 45%;
+    min-width: 100%;
+    max-width: 100%;
   }
 
   .athlete-image {
