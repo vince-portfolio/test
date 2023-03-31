@@ -80,8 +80,6 @@ body {
 .middle {
   background-color: white;
   flex-direction: column;
-
-  min-width: 33.34%;
 }
 
 .FPG {
