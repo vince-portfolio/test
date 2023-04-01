@@ -128,13 +128,21 @@ body {
     -ms-display: flex;
     -o-display: flex;
     display: flex;
+
+    align-items: center;
   }
 
   .athlete-image {
     height: 100%;
     width: 50%;
 
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     display: flex;
+
+    align-self: flex-end;
   }
   
   .vs-column .athlete-image img {
