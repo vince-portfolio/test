@@ -130,6 +130,8 @@ body {
     display: flex;
 
     align-items: center;
+    
+    border: 3px solid red;
   }
 
   .athlete-image {
