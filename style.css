@@ -122,6 +122,8 @@ body {
   .vs-column {
     max-height: 44.99%;
     min-width: 100%;
+    
+    min-height: 44.99%;
 
     -webkit-display: flex;
     -moz-display: flex;
