@@ -156,6 +156,8 @@ body {
     margin-right: 0;
 
     align-self: flex-end;
+
+    height: 100%;
   }
 
   .athlete-name {
@@ -210,6 +212,8 @@ body {
     width: 75%;
     background-color: white;
     border: 0.75rem solid white;
+
+    align-self: center;
   }
 
   .row {
