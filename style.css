@@ -131,7 +131,6 @@ body {
   
   .vs-column .athlete-image img {
     height: 100%;
-    min-height: 100%;
     width: auto;
   }
 
