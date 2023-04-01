@@ -57,7 +57,7 @@ el('right-2',0,'touchstart',()=>s2=e('a',s2,2))
   sX=e.touches[0].screenX
 }
 el('vs-column',0,'touchstart',(e)=>tS(e))
-el('vs-column',2,'touchstart',(e)=>tS(e))}
+el('vs-column',1,'touchstart',(e)=>tS(e))}
 {const tE=(ev,s)=>{
   ev.preventDefault()
   eX=ev.changedTouches[0].screenX
@@ -65,7 +65,7 @@ el('vs-column',2,'touchstart',(e)=>tS(e))}
   eX>25?(s==1?s1=e('s',s1,1):s2=e('s',s2,2)):(eX<-25?(s==1?s1=e('a',s1,1):s2=e('a',s2,2)):null)
 }
 el('vs-column',0,'touchend',(e)=>tE(e,1))
-el('vs-column',2,'touchend',(e)=>tE(e,2))}}
+el('vs-column',1,'touchend',(e)=>tE(e,2))}}
 window.onload = () => {
   for(let l=1;l<ad.length;l++){
     let i = document.createElement("img");
