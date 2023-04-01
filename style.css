@@ -234,6 +234,8 @@ body {
   }
 
   .middle {
+    max-height: 9.99%;
+    
     height: 9.99%;
     
     max-height: 9.99%;
