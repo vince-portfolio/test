@@ -123,6 +123,10 @@ body {
     max-height: 44.99%;
     min-width: 100%;
 
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     display: flex;
   }
 
@@ -136,6 +140,8 @@ body {
   .vs-column .athlete-image img {
     height: 100%;
     width: auto;
+
+    align-self: flex-end;
   }
 
   .athlete-image-2 {
