@@ -120,49 +120,23 @@ body {
   }
 
   .vs-column {
-    max-height: 44.99%;
     min-width: 100%;
-
     min-height: 44.99%;
-
-    -webkit-display: flex;
-    -moz-display: flex;
-    -ms-display: flex;
-    -o-display: flex;
-    display: flex;
-
-    align-items: center;
-
-    border: 3px solid red;
+    max-height: 44.99%;
   }
 
   .athlete-image {
     height: 100%;
     width: 50%;
-
-    -webkit-display: flex;
-    -moz-display: flex;
-    -ms-display: flex;
-    -o-display: flex;
-    display: flex;
-
-    align-self: flex-end;
   }
   
   .vs-column .athlete-image img {
     height: 100%;
     width: auto;
-
-    align-self: flex-end;
   }
 
   .athlete-image-2 {
     margin-right: 0;
-
-    align-self: flex-end;
-
-    height: 100%;
-    min-height: 100%;
   }
 
   .athlete-name {
@@ -204,14 +178,6 @@ body {
     width: 50%;
     display: flex;
     align-items: center;
-
-    -webkit-display: flex;
-    -moz-display: flex;
-    -ms-display: flex;
-    -o-display: flex;
-    display: flex;
-
-    align-self: center;
   }
 
   .right {
@@ -223,8 +189,6 @@ body {
     width: 75%;
     background-color: white;
     border: 0.75rem solid white;
-
-    align-self: center;
   }
 
   .row {
@@ -234,20 +198,9 @@ body {
   }
 
   .middle {
+    min-width: 100%;
     height: 9.99%;
     max-height: 9.99%;
-
-    min-width: 100%;
-
-    -webkit-display: flex;
-    -moz-display: flex;
-    -ms-display: flex;
-    -o-display: flex;
-    display: flex;
-
-    align-items: center;
-
-    border: 3px solid red;
   }
 
   .FPG {
