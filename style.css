@@ -235,6 +235,8 @@ body {
 
   .middle {
     height: 9.99%;
+    
+    max-height: 9.99%;
   }
 
   .FPG {
