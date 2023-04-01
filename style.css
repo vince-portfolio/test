@@ -122,11 +122,15 @@ body {
   .vs-column {
     max-height: 44.99%;
     min-width: 100%;
+
+    display: flex;
   }
 
   .athlete-image {
     height: 100%;
     width: 50%;
+
+    display: flex;
   }
   
   .vs-column .athlete-image img {
