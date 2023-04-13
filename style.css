@@ -18,8 +18,6 @@ body {
 
 .athlete-image {
   width: 100%;
-  max-width: 100%;
-  max-height: 100%;
   align-self: flex-end;
   position: relative;
   display: flex;
@@ -27,8 +25,8 @@ body {
 }
 
 .vs-column .athlete-image img {
-  width: max(100%, auto);
-  height: max(100%, auto);
+  width: min(100%, auto);
+  height: min(100%, auto);
   max-width: 100%;
   max-height: 100%;
 }
