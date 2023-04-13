@@ -133,8 +133,8 @@ body {
   }
   
   .vs-column .athlete-image img {
-    height: 100%;
-    width: auto;
+    width: min(100%, auto);
+    height: min(100%, auto);
   }
 
   .athlete-image-2 {
