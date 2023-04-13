@@ -17,8 +17,7 @@ body {
 }
 
 .athlete-image {
-  width: min(100%, auto);
-  height: min(100%, auto);
+  width: 100%;
   align-self: flex-end;
   position: relative;
   display: flex;
@@ -133,8 +132,9 @@ body {
   }
   
   .vs-column .athlete-image img {
-    width: min(100%, auto);
-    height: min(100%, auto);
+    height: 100%;
+    /*width: min(100%, auto);
+    height: min(100%, auto);*/
   }
 
   .athlete-image-2 {
