@@ -71,32 +71,22 @@ window.onload = () => {
     } while (is==1?ad[s][1]!='MMA':ad[s][1]=='MMA')
     return s
   }
+  const ii=(l)=>{
+    let i = document.createElement("img");
+      i.src=ad[l][2]
+      i.style.display="none"
+      g('l')[0].append(i);
+  }
   let r1=-1,l1=ad.length,r2=-1,l2=ad.length
   while (r1<l1&&r2<l2) {
-    if (r1<l1) {
-      r1=e('a',r1,1)
-      l1=e('s',l1,1)
-      let i = document.createElement("img");
-      i.src=ad[r1][2]
-      i.style.display="none"
-      g('l')[0].append(i);
-      i = document.createElement("img");
-      i.src=ad[l1][2]
-      i.style.display="none"
-      g('l')[0].append(i);
-    }
-    if (r2<l2) {
-      r2=e('a',r2,2)
-      l2=e('s',l2,2)
-      let i = document.createElement("img");
-      i.src=ad[r2][2]
-      i.style.display="none"
-      g('l')[0].append(i);
-      i = document.createElement("img");
-      i.src=ad[l2][2]
-      i.style.display="none"
-      g('l')[0].append(i);
-    }
+    r2=e('a',r2,2)
+    r2<l2?ii(r2):null
+    l2=e('s',l2,2)
+    r2<l2?ii(l2):null
+    r1=e('a',r1,1)
+    r1<l1?ii(r1):null
+    l1=e('s',l1,1)
+    r1<l1?ii(l1):null
   }
 }
 console.clear()}
