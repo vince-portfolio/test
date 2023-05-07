@@ -30,8 +30,7 @@ const i=(s,a)=>{
     gt('c-'+l+'-'+s,1,a,l)
   }
 }
-let s1=0,s2=1
-i(1,s1);i(2,s2)
+let s1=-1,s2=-1
 const el=(c,cn,e,f)=>g(c)[cn].addEventListener(e,f,{passive: false})
 const t='touchstart'
 el('body',0,t,(e)=>e.preventDefault())
@@ -44,6 +43,8 @@ const e=(ev,s,is,r)=>{
   r?i(is,s):null
   return s
 }
+s1=e('a',s1,1,1)
+s2=e('a',s2,2,1)
 const c='click'
 el('left-1',0,c,()=>s1=e('s',s1,1,1))
 el('right-1',0,c,()=>s1=e('a',s1,1,1))
