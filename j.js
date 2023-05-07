@@ -20,7 +20,7 @@ for(let l=0;l<at.length;l++){
 }ad.shift()}
 const g=(c)=>document.getElementsByClassName(c)
 const i=(s,a)=>{
-  let gt=(c,n,n1,n2)=>g(c)[n].innerText=ad[n1][n2]
+  const gt=(c,n,n1,n2)=>g(c)[n].innerText=ad[n1][n2]
   gt('athlete-name',s-1,a,0)
   g('athlete-image-'+s)[0].src=ad[a][2]
   gt('sport-'+s,0,a,1)
@@ -52,14 +52,10 @@ el('right-1',0,'touchstart',()=>s1=e('a',s1,1))
 el('left-2',0,'touchstart',()=>s2=e('s',s2,2))
 el('right-2',0,'touchstart',()=>s2=e('a',s2,2))
 {let sX,eX
-{const tS=(e)=>{
-  e.preventDefault()
-  sX=e.touches[0].screenX
-}
+{const tS=(e)=>sX=e.touches[0].screenX
 el('vs-column',0,'touchstart',(e)=>tS(e))
 el('vs-column',1,'touchstart',(e)=>tS(e))}
 {const tE=(ev,s)=>{
-  ev.preventDefault()
   eX=ev.changedTouches[0].screenX
   eX-=sX
   eX>25?(s==1?s1=e('s',s1,1):s2=e('s',s2,2)):(eX<-25?(s==1?s1=e('a',s1,1):s2=e('a',s2,2)):null)
@@ -67,11 +63,40 @@ el('vs-column',1,'touchstart',(e)=>tS(e))}
 el('vs-column',0,'touchend',(e)=>tE(e,1))
 el('vs-column',1,'touchend',(e)=>tE(e,2))}}
 window.onload = () => {
-  for(let l=1;l<ad.length;l++){
-    let i = document.createElement("img");
-    i.src=ad[l][2]
-    i.style.display="none"
-    g('l')[0].append(i);
+  const e=(ev,s,is)=>{
+    do {
+      ev=='a'?s+=1:s-=1
+      s=s>=ad.length?0:s
+      s=s<=-1?ad.length-1:s
+    } while (is==1?ad[s][1]!='MMA':ad[s][1]=='MMA')
+    return s
+  }
+  let r1=-1,l1=ad.length,r2=-1,l2=ad.length
+  while (r1<l1&&r2<l2) {
+    if (r1<l1) {
+      r1=e('a',r1,1)
+      l1=e('s',l1,1)
+      let i = document.createElement("img");
+      i.src=ad[r1][2]
+      i.style.display="none"
+      g('l')[0].append(i);
+      i = document.createElement("img");
+      i.src=ad[l1][2]
+      i.style.display="none"
+      g('l')[0].append(i);
+    }
+    if (r2<l2) {
+      r2=e('a',r2,2)
+      l2=e('s',l2,2)
+      let i = document.createElement("img");
+      i.src=ad[r2][2]
+      i.style.display="none"
+      g('l')[0].append(i);
+      i = document.createElement("img");
+      i.src=ad[l2][2]
+      i.style.display="none"
+      g('l')[0].append(i);
+    }
   }
 }
 console.clear()}
