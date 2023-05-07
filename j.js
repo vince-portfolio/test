@@ -33,59 +33,54 @@ const i=(s,a)=>{
 let s1=0,s2=1
 i(1,s1);i(2,s2)
 const el=(c,cn,e,f)=>g(c)[cn].addEventListener(e,f,{passive: false})
-el('body',0,'touchstart',(e)=>e.preventDefault())
-const e=(ev,s,is)=>{
+const t='touchstart'
+el('body',0,t,(e)=>e.preventDefault())
+const e=(ev,s,is,r)=>{
   do {
     ev=='a'?s+=1:s-=1
     s=s>=ad.length?0:s
     s=s<=-1?ad.length-1:s
   } while (is==1?ad[s][1]!='MMA':ad[s][1]=='MMA')
-  i(is,s)
+  r?i(is,s):null
   return s
 }
-el('left-1',0,'click',()=>s1=e('s',s1,1))
-el('right-1',0,'click',()=>s1=e('a',s1,1))
-el('left-2',0,'click',()=>s2=e('s',s2,2))
-el('right-2',0,'click',()=>s2=e('a',s2,2))
-el('left-1',0,'touchstart',()=>s1=e('s',s1,1))
-el('right-1',0,'touchstart',()=>s1=e('a',s1,1))
-el('left-2',0,'touchstart',()=>s2=e('s',s2,2))
-el('right-2',0,'touchstart',()=>s2=e('a',s2,2))
+const c='click'
+el('left-1',0,c,()=>s1=e('s',s1,1,1))
+el('right-1',0,c,()=>s1=e('a',s1,1,1))
+el('left-2',0,c,()=>s2=e('s',s2,2,1))
+el('right-2',0,c,()=>s2=e('a',s2,2,1))
+el('left-1',0,t,()=>s1=e('s',s1,1,1))
+el('right-1',0,t,()=>s1=e('a',s1,1,1))
+el('left-2',0,t,()=>s2=e('s',s2,2,1))
+el('right-2',0,t,()=>s2=e('a',s2,2,1))
 {let sX,eX
+const vs='vs-column'
 {const tS=(e)=>sX=e.touches[0].screenX
-el('vs-column',0,'touchstart',(e)=>tS(e))
-el('vs-column',1,'touchstart',(e)=>tS(e))}
+el(vs,0,t,(e)=>tS(e))
+el(vs,1,t,(e)=>tS(e))}
 {const tE=(ev,s)=>{
   eX=ev.changedTouches[0].screenX
   eX-=sX
-  eX>25?(s==1?s1=e('s',s1,1):s2=e('s',s2,2)):(eX<-25?(s==1?s1=e('a',s1,1):s2=e('a',s2,2)):null)
+  eX>25?(s==1?s1=e('s',s1,1,1):s2=e('s',s2,2,1)):(eX<-25?(s==1?s1=e('a',s1,1,1):s2=e('a',s2,2,1)):null)
 }
-el('vs-column',0,'touchend',(e)=>tE(e,1))
-el('vs-column',1,'touchend',(e)=>tE(e,2))}}
+el(vs,0,'touchend',(e)=>tE(e,1))
+el(vs,1,'touchend',(e)=>tE(e,2))}}
 window.onload = () => {
-  const e=(ev,s,is)=>{
-    do {
-      ev=='a'?s+=1:s-=1
-      s=s>=ad.length?0:s
-      s=s<=-1?ad.length-1:s
-    } while (is==1?ad[s][1]!='MMA':ad[s][1]=='MMA')
-    return s
-  }
   const ii=(l)=>{
     let i = document.createElement("img");
       i.src=ad[l][2]
       i.style.display="none"
-      g('l')[0].append(i);
+      g('l')[0].append(i)
   }
   let r1=-1,l1=ad.length,r2=-1,l2=ad.length
   while (r1<l1&&r2<l2) {
-    r2=e('a',r2,2)
+    r2=e('a',r2,2,0)
     r2<l2?ii(r2):null
-    l2=e('s',l2,2)
+    l2=e('s',l2,2,0)
     r2<l2?ii(l2):null
-    r1=e('a',r1,1)
+    r1=e('a',r1,1,0)
     r1<l1?ii(r1):null
-    l1=e('s',l1,1)
+    l1=e('s',l1,1,0)
     r1<l1?ii(l1):null
   }
 }
